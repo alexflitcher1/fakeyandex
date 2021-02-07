@@ -1,0 +1,190 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-image: url(1.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 21%;
+  border-radius: 20px;
+  margin: auto auto;
+  margin-top: 10%;
+  font-family: 'Ubuntu', sans-serif;
+  background: white;
+  padding: 30px;
+  justify-content: flex-end;
+}
+
+.form-div {
+  display: flex;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type=text], input[type=password] {
+  width: 120%;
+  padding: 13px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.2s;
+  outline: none;
+  border-radius: 10px;
+}
+
+input:focus {
+  border: 2px solid #fffc61;
+}
+
+input[type=submit] {
+  width: 120%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background: #ffd000;
+  border: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  outline: none;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+input[type=submit]:hover {
+  background: #ffbb00;
+}
+
+.singup {
+  width: 103%;
+  padding: 10px;
+  text-align: center;
+  margin: 10px 2px;
+  background: white;
+  margin-left: 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.2s;
+  outline: none;
+  border-radius: 10px;
+
+}
+
+.singup:hover {
+  background: #ebebeb;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+.text {
+  margin-top: 15px;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  font-family: YS Text,Arial,sans-serif;
+}
+
+.with {
+  margin-top: 30px;
+}
+
+.error {
+  color: red;
+}
